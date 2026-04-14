@@ -1,19 +1,29 @@
+
 :root {
-  --color-fondo: #000000;
+  --color-fondo: #242424;
+  --color-fondo-body: #ffffff;
   --color-texto: #ffffff;
-  --fuente-texto: 'Lato', sans-serif;
-  --tamaño-Titulo: 30px;
+  --color-texto-body: #000000;
+  --color-detalles: #ff0000;
+  --fuente-texto:"Nunito", sans;
+  --tamaño-Titulo: 35px;
+  --tamaño-subtitulos: 20px;
+  --grosor-titulo:600;
+  --grosor-texto:300;
 }
 
 * {
-  background-color: var(--color-fondo);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: var(--color-fondo-body);
+}
+
 #header {
-  background-color: var(--color-fondo);
+  border-bottom: 3px solid var(--color-detalles);
 }
 
 .header__inner {
@@ -21,6 +31,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  background-color: var(--color-fondo);
 }
 
 ul {
@@ -28,7 +39,7 @@ ul {
 }
 
 .logo_header {
-  height: 90px;
+  height: 70px;
   width: 100px;
   object-fit: contain;
   filter: none;
@@ -41,19 +52,160 @@ ul {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  font-weight: 800;
 }
 
-.nav__list {
+.nav_paginas {
   display: flex;
   gap: 20px;
+  list-style: none;
 }
 
-.nav__list a {
+.nav_paginas a {
   font-family: var(--fuente-texto);
   color: var(--color-texto);
+  font-size: var(--tamaño-subtitulos);
   text-decoration: none;
+  font-weight: 600;
 }
 
-.nav__list a:hover {
-  text-decoration: underline;
+.nav_paginas a:hover {
+  border-bottom: 1px solid var(--color-texto);
+}
+
+.imagen_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.bienvenida_container {
+  background-color: transparent;
+}
+
+.bienvenida_container h1 {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto-body);
+  font-size: var(--tamaño-Titulo);
+  font-weight: var(--grosor-titulo);
+  margin-bottom: 10px;
+}
+
+.bienvenida_container p {
+  color: var(--color-texto-body);
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-subtitulos);
+  font-weight: var(--grosor-texto);
+}
+
+.cancha {
+  width: 50%;
+  height: auto;
+}
+
+.noticias_container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+.tabla_noticias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  flex: 3;
+}
+
+.carta {
+  background-color: transparent;
+  border-radius: 0;
+  overflow: hidden;
+  border: none;
+  border-bottom: 1px solid var(--color-detalles);
+  padding-bottom: 15px;
+}
+
+.noticia_img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.carta h3 {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto-body);
+  font-size: 18px;
+  padding: 10px 12px 4px;
+}
+
+.carta p {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto-body);
+  font-size: 14px;
+  padding: 0 12px 12px;
+}
+
+.tabla_posiciones {
+  flex: 1;
+  background-color: transparent;
+  border-left: 3px solid var(--color-detalles);
+  padding: 0 0 0 16px;
+  min-width: 200px;
+  height: 300px;
+}
+
+.tabla_posiciones h2 {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto-body);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.tabla_posiciones__img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+#footer {
+  background-color: var(--color-fondo);
+  border-top: 3px solid var(--color-detalles);
+  margin-top: 40px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.footer__texto {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto);
+  font-size: 14px;
+  font-weight: var(--grosor-texto);
+}
+
+.footer__nombre {
+  color: var(--color-detalles);
+  font-weight: 700;
+}
+
+.footer__copy {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto);
+  font-size: 13px;
+  font-weight: var(--grosor-texto);
+  opacity: 0.6;
 }
