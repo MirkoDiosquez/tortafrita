@@ -1,0 +1,26 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/health_pickup.gd" id="1_hp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hp"]
+radius = 20.0
+
+[node name="HealthPickup" type="Area2D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_hp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hp")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+modulate = Color(0, 1, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = 0.0
+text = "+"
+horizontal_alignment = 1

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://di5bfgqg5f05"]
+
+[ext_resource type="PackedScene" uid="uid://bsm7u2gidqno8" path="res://Escenas/fondo.tscn" id="1_0hol4"]
+[ext_resource type="PackedScene" uid="uid://y1ltcd0mc7wk" path="res://Escenas/player.tscn" id="2_ir8iy"]
+[ext_resource type="PackedScene" uid="uid://bt3pklo7p2y8n" path="res://Escenas/deco.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://dybdkr6x10srq" path="res://Escenas/deco_2.tscn" id="4_0hol4"]
+[ext_resource type="PackedScene" uid="uid://dylgpcwfu21hh" path="res://Escenas/deco_3.tscn" id="5_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://bnujildrdsr2b" path="res://Escenas/enemigo_lvl_1.tscn" id="6_kdubu"]
+
+[node name="Node2D" type="Node2D" unique_id=1977045671]
+
+[node name="fondo" parent="." unique_id=453359241 instance=ExtResource("1_0hol4")]
+
+[node name="Player" parent="." unique_id=265720657 instance=ExtResource("2_ir8iy")]
+position = Vector2(157, 276)
+scale = Vector2(0.8, 0.8)
+
+[node name="Deco" parent="." unique_id=572744220 instance=ExtResource("3_epypp")]
+position = Vector2(5, 40)
+
+[node name="Deco2" parent="." unique_id=1605563493 instance=ExtResource("4_0hol4")]
+position = Vector2(0, 40)
+
+[node name="TileMapLayer" parent="." unique_id=1415392917 instance=ExtResource("5_q6r6c")]
+position = Vector2(0, 40)
+
+[node name="enemigoLvl1" parent="." unique_id=141286209 instance=ExtResource("6_kdubu")]
+position = Vector2(434, 238)
