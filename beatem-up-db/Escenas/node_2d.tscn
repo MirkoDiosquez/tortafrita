@@ -13,7 +13,7 @@
 
 [node name="Player" parent="." unique_id=265720657 instance=ExtResource("2_ir8iy")]
 position = Vector2(157, 276)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.9, 0.9)
 
 [node name="Deco" parent="." unique_id=572744220 instance=ExtResource("3_epypp")]
 position = Vector2(5, 40)
