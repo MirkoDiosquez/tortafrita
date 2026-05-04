@@ -1,16 +1,15 @@
 extends CharacterBody2D
-
 signal enemy_died(enemy: CharacterBody2D)
-
 @onready var anim = $AnimatedSprite2D
 @onready var sight_area = $DetectionArea
 @onready var attack_area = $AttackZone
 @onready var attack_cooldown = $Cooldown
+@onready var health_bar = $HealthBar
 
 const SPEED = 180.0
 const PATROL_SPEED = 90.0
 const MAX_HEALTH = 25
-const ATTACK_DAMAGE = 10
+const ATTACK_DAMAGE = 5
 const ATTACK_DISTANCE = 40 
 
 ## Probabilidad de soltar item de vida (0.0 a 1.0)
@@ -32,6 +31,9 @@ var last_direction_x = 1.0
 const PATROL_CHANGE_TIME = 2.0
 
 func _ready() -> void:
+	health_bar.max_value = MAX_HEALTH
+	health_bar.value = current_health
+
 	attack_cooldown.timeout.connect(_on_attack_cooldown_timeout)
 	patrol_direction = [Vector2.RIGHT, Vector2.LEFT, Vector2.UP, Vector2.DOWN].pick_random()
 	
@@ -120,6 +122,7 @@ func take_damage(amount: int) -> void:
 		is_hit = true
 		velocity = Vector2.ZERO
 		anim.play("enemy_hited")
+	health_bar.value = current_health
 
 func _die() -> void:
 	is_dead = true

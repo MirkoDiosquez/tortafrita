@@ -363,7 +363,18 @@ radius = 27.000004
 height = 86.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ovvfi"]
-radius = 136.0588
+radius = 195.20758
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuiaf"]
+bg_color = Color(0.85742587, 0.041365027, 4.813075e-07, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="enemigoLvl1" type="CharacterBody2D" unique_id=141286209]
 collision_layer = 2
@@ -410,3 +421,12 @@ debug_color = Color(0.9081127, 0.98069185, 0.99999994, 0.41960785)
 [node name="Cooldown" type="Timer" parent="." unique_id=630488593]
 wait_time = 1.5
 one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=222903201]
+offset_left = -47.0
+offset_top = -16.0
+offset_right = 48.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_vuiaf")
+show_percentage = false

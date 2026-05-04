@@ -11,7 +11,7 @@ const maxHealth = 100
 const maxShield = 100
 const regenShield = 1
 const shieldDamageMulti = 2
-const SPEED = 300.0
+const SPEED = 200.0
 
 var currentHealth = maxHealth
 var currentShield = maxShield
